@@ -22,6 +22,13 @@ public class FPS_control : MonoBehaviour
         sum = 0.001f;
     }
 
+    // Use this for initialization
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
         sum = Mathf.Sqrt(Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * Input.GetAxis("Vertical")) + 0.001f;
