@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
+  - Pellet
   - enemy
   layers:
   - Default
