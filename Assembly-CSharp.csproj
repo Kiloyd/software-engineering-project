@@ -58,10 +58,10 @@
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\FpsController.cs" />
      <Compile Include="Assets\Scripts\GhostMovement.cs" />
      <Compile Include="Assets\Scripts\PelletRotator.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerEvents.cs" />
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
  <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>

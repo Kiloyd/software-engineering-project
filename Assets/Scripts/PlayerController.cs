@@ -6,35 +6,37 @@ public class PlayerController : MonoBehaviour
 {
     #region Property
 
-    /*
-    [SerializeField]
-    private GameManager gm;
-    */
+    [SerializeField][Header("Movement speed")]
+    private float speed = 1f;
+
+    private Rigidbody rb;
+    private float sum;
 
     #endregion
 
-    #region Unity
+    #region Unity 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnEnable()
     {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Game Over !");
-            //gm.loseEvent();
-        }
-
+        rb = GetComponent<Rigidbody>();
+        sum = 0.001f;
     }
 
-    private void OnTriggerEnter(Collider other)
+    // Use this for initialization
+    private void Start()
     {
-        if(other.gameObject.CompareTag("Pellet"))
-        {
-            Destroy(other.gameObject);
-            Debug.Log("picked");
-            //gm.pickedpoint();
-        }
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        sum = Mathf.Sqrt(Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * Input.GetAxis("Vertical")) + 0.001f;
+        //Debug.Log(sum.ToString());
+
+        // maybe use velocity = max(0.5, calculate speed)
+        rb.velocity = Input.GetAxis("Horizontal") / sum * speed * transform.right + Input.GetAxis("Vertical") / sum * speed * transform.forward;
     }
 
     #endregion
-      
 }
