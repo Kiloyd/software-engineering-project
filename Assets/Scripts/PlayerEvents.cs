@@ -6,32 +6,31 @@ public class PlayerEvents : MonoBehaviour
 {
     #region Property
 
-    /*
     [SerializeField]
-    private GameManager gm;
-    */
+    private gameManager gm;
 
     #endregion
 
     #region Unity
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnEnable()
     {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Game Over !");
-            //gm.loseEvent();
-        }
-
+        gm = FindObjectOfType<gameManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Pellet"))
         {
-            Destroy(other.gameObject);
+            Destroy(other.gameObject);  // may need edit.
             Debug.Log("picked");
-            //gm.pickedpoint();
+            gm.pickedPoint();
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Game Over !");
+            gm.gameLose();
         }
     }
 
