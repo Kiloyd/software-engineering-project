@@ -7,7 +7,7 @@ public class PlayerEvents : MonoBehaviour
     #region Property
 
     [SerializeField]
-    private gameManager gm;
+    private GameHandler gm;
 
     #endregion
 
@@ -15,7 +15,7 @@ public class PlayerEvents : MonoBehaviour
 
     private void OnEnable()
     {
-        gm = FindObjectOfType<gameManager>();
+        gm = FindObjectOfType<GameHandler>();
     }
 
     private void OnTriggerEnter(Collider other)

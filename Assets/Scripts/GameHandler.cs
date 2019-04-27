@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameManager : MonoBehaviour
+public class GameHandler : MonoBehaviour
 {
     #region Property
 
@@ -13,9 +13,16 @@ public class gameManager : MonoBehaviour
 
     private int nowScore;
 
+    private GameObject points;
+
     #endregion
 
     #region Unity
+
+    private void Start()
+    {
+        points = GameObject.Find("PickupPoints");
+    }
 
     private void Awake()
     {
@@ -24,8 +31,8 @@ public class gameManager : MonoBehaviour
 
     private void Update()
     {
-        if (nowScore >= victoryScore)
-            gameWin();
+        //if (nowScore >= victoryScore)
+            //gameWin();
     }
 
     #endregion
@@ -36,6 +43,12 @@ public class gameManager : MonoBehaviour
     {
         nowScore += pelletScore;
         // play sound effect
+
+        int remainPoints = points.transform.childCount;
+        Debug.Log("Remaining Points: " + remainPoints);
+        if(remainPoints <= 0) {
+            gameWin();
+        }
     }
 
     public void gameLose()
