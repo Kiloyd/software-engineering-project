@@ -15,19 +15,12 @@ public class LevelHandler : MonoBehaviour
  
     private GameObject levelObject; 
  
-    // Start is called before the first frame update 
     void Start() 
     { 
         levelObject = new GameObject("Level"); 
         levelObject.transform.localScale = new Vector3(2, 1, 2); 
  
         LoadLevel(levelData.text); 
-    } 
- 
-    // Update is called once per frame 
-    void Update() 
-    { 
-         
     } 
  
     private void LoadLevel(string level) { 
