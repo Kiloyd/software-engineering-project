@@ -21,7 +21,7 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        points = GameObject.Find("PickupPoints");
+        points = GameObject.Find("Pellets");
     }
 
     private void Awake()

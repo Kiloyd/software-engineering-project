@@ -1,0 +1,15 @@
+<Level>
+	<Ground xSc="28" zSc="31"/>
+	<Player xPos="13.5" zPos="7"/>
+	<Walls>
+		<Wall xPos="3" zPos="3"/>
+		<Wall xPos="3" zPos="4"/>
+		<Wall xPos="0" zPos="0"/>
+		<Wall xPos="5" zPos="3"/>
+		<Wall xPos="5" zPos="4"/>
+	</Walls>
+	<Pellets>
+		<Pellet xPos="4" zPos="4"/>
+		<Pellet xPos="5" zPos="5"/>
+	</Pellets>
+</Level>
