@@ -8,9 +8,13 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField][Header("Movement speed")]
     private float speed = 1f;
+    [SerializeField][Header("Stop speed threshold")]
+    private float stop_speed = 0.1f;
 
     private Rigidbody rb;
     private float sum;
+    private float horizontal_speed;
+    private float vertical_speed;
 
     #endregion
 
@@ -20,6 +24,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         sum = 0.001f;
+        horizontal_speed = 0f;
+        vertical_speed = 0f;
     }
 
     // Use this for initialization
@@ -31,11 +37,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        sum = Mathf.Sqrt(Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * Input.GetAxis("Vertical")) + 0.001f;
+        sum = Mathf.Max(Mathf.Sqrt(Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * Input.GetAxis("Vertical")), 0.1f) ;
         //Debug.Log(sum.ToString());
 
-        // maybe use velocity = max(0.5, calculate speed)
-        rb.velocity = Input.GetAxis("Horizontal") / sum * speed * transform.right + Input.GetAxis("Vertical") / sum * speed * transform.forward;
+        horizontal_speed = (Mathf.Abs(Input.GetAxis("Horizontal") * speed) < stop_speed) ? 0f : Input.GetAxis("Horizontal") * speed;
+        vertical_speed = (Mathf.Abs(Input.GetAxis("Vertical") * speed) < stop_speed) ? 0f : Input.GetAxis("Vertical") * speed;
+
+        rb.velocity = horizontal_speed / sum * transform.right + vertical_speed / sum * transform.forward;
     }
 
     #endregion

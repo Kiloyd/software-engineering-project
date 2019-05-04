@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  stop_speed: 0.1
 --- !u!114 &5830304459833049185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,8 +373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumX: 60
   minimumX: -60
-  sensitivityX: 10
-  sensitivityY: 10
+  sensitivityX: 3
+  sensitivityY: 3
   head: {fileID: 5830304460367289128}
   body: {fileID: 5830304459833049191}
 --- !u!1 &5830304460852207607

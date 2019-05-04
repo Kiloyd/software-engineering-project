@@ -29,7 +29,7 @@ public class Fire_Weapon : MonoBehaviour
 
             if (Physics.Raycast(fire_ray, out fire_hit, float.MaxValue))
             {
-                Debug.DrawRay(fire_ray.origin, fire_ray.direction, Color.red);
+                Debug.DrawRay(fire_ray.origin, fire_ray.direction * 10, Color.red);
                 Debug.Log(fire_hit.point.ToString() + " " + fire_hit.collider.gameObject.name);
             }
         }
