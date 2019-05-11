@@ -5,13 +5,27 @@ using System.Xml;
 using UnityEngine; 
  
 public class LevelHandler : MonoBehaviour 
-{ 
-    public TextAsset levelData; 
+{
+    [SerializeField]
+    private TextAsset levelData; 
 
-    public GameObject playerPrefab; 
-    public GameObject groundPrefab; 
-    public GameObject wallPrefab; 
-    public GameObject pelletPrefab;
+    [SerializeField]
+    private GameObject playerPrefab;
+
+    [SerializeField]
+    private GameObject groundPrefab;
+
+    [SerializeField]
+    private GameObject wallPrefab; 
+
+    [SerializeField]
+    private GameObject pelletPrefab;
+
+    [SerializeField]
+    private GameObject stationPrefab;
+
+    [SerializeField]
+    private GameObject cratePrefab;
  
     private GameObject levelObject; 
  
@@ -31,6 +45,8 @@ public class LevelHandler : MonoBehaviour
         ParseGround(doc); 
         ParseWalls(doc);
         ParsePellets(doc);
+        ParseStations(doc);
+        ParseCrates(doc);
     } 
  
     private void ParsePlayer(XmlDocument doc) { 
@@ -48,6 +64,9 @@ public class LevelHandler : MonoBehaviour
     } 
 
     private void ParseGround(XmlDocument doc) { 
+        GameObject tempObject = Instantiate(groundPrefab); 
+        tempObject.transform.parent = levelObject.transform; 
+
         XmlNode main = doc.SelectSingleNode("Level/Ground"); 
         if(main == null) { 
             return; 
@@ -56,21 +75,18 @@ public class LevelHandler : MonoBehaviour
         float xSc = (float)XmlConvert.ToDouble(main.Attributes["xSc"].Value); 
         float zSc = (float)XmlConvert.ToDouble(main.Attributes["zSc"].Value); 
  
-        GameObject tempObject = Instantiate(groundPrefab); 
-        tempObject.transform.parent = levelObject.transform; 
- 
         tempObject.transform.localPosition = new Vector3((xSc/2)-0.25f, 0, (zSc/2)-0.25f); 
         tempObject.transform.localScale = new Vector3(xSc/10, 1, zSc/10); 
     } 
  
     private void ParseWalls(XmlDocument doc) { 
+        GameObject wallsObject = new GameObject("Walls"); 
+        wallsObject.transform.parent = levelObject.transform;
+
         XmlNode main = doc.SelectSingleNode("Level/Walls"); 
         if(main == null) { 
             return; 
         } 
- 
-        GameObject wallsObject = new GameObject("Walls"); 
-        wallsObject.transform.parent = levelObject.transform;
         
         GameObject tempObject; 
         foreach(XmlNode node in main) { 
@@ -87,13 +103,13 @@ public class LevelHandler : MonoBehaviour
     } 
 
     private void ParsePellets(XmlDocument doc) {
+        GameObject pelletsObject = new GameObject("Pellets"); 
+        pelletsObject.transform.parent = levelObject.transform; 
+
         XmlNode main = doc.SelectSingleNode("Level/Pellets"); 
         if(main == null) { 
             return; 
         } 
- 
-        GameObject pelletsObject = new GameObject("Pellets"); 
-        pelletsObject.transform.parent = levelObject.transform; 
  
         GameObject tempObject; 
         foreach(XmlNode node in main) { 
@@ -107,5 +123,52 @@ public class LevelHandler : MonoBehaviour
         }
 
         pelletsObject.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void ParseStations(XmlDocument doc) {
+        GameObject stationsObject = new GameObject("Stations"); 
+        stationsObject.transform.parent = levelObject.transform; 
+
+        XmlNode main = doc.SelectSingleNode("Level/Stations"); 
+        if(main == null) { 
+            return; 
+        } 
+ 
+        GameObject tempObject; 
+        foreach(XmlNode node in main) { 
+            float xPos = (float)XmlConvert.ToDouble(node.Attributes["xPos"].Value); 
+            float zPos = (float)XmlConvert.ToDouble(node.Attributes["zPos"].Value); 
+ 
+            tempObject = Instantiate(stationPrefab); 
+            tempObject.transform.parent = stationsObject.transform; 
+ 
+            tempObject.transform.localPosition = new Vector3(xPos, 1, zPos); 
+        }
+
+        stationsObject.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void ParseCrates(XmlDocument doc) {
+        GameObject cratesObject = new GameObject("Crates");
+        cratesObject.transform.parent = levelObject.transform;
+
+        XmlNode main = doc.SelectSingleNode("Level/Crates");
+        if(main == null) {
+            return;
+        }
+
+        GameObject tempObject;
+        foreach(XmlNode node in main) {
+            float xPos = (float)XmlConvert.ToDouble(node.Attributes["xPos"].Value); 
+            float yPos = (float)XmlConvert.ToDouble(node.Attributes["yPos"].Value); 
+            float zPos = (float)XmlConvert.ToDouble(node.Attributes["zPos"].Value); 
+
+            tempObject = Instantiate(cratePrefab);
+            tempObject.transform.parent = cratesObject.transform;
+
+            tempObject.transform.localPosition = new Vector3(xPos, yPos, zPos);
+        }
+
+        cratesObject.transform.localScale = new Vector3(1, 1, 1);
     }
 } 
