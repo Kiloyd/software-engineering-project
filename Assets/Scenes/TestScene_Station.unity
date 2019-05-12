@@ -264,20 +264,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049185, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: stationDistance
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049185, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: stationHoldTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443682119, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5830304460367289127, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
         type: 3}
       propertyPath: m_Layer
@@ -302,6 +288,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443682119, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830304459833049185, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
+        type: 3}
+      propertyPath: stationDistance
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5830304459833049185, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
+        type: 3}
+      propertyPath: stationHoldTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5830304460852207609, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
@@ -502,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 2561955118150177809, guid: 723ee4842ec45a508ab0181d65d033c4,
         type: 3}
       propertyPath: m_Name
-      value: Station
+      value: Station(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 2561955118150177808, guid: 723ee4842ec45a508ab0181d65d033c4,
         type: 3}

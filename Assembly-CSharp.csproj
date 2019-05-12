@@ -90,25 +90,25 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/ubuntu/Unity/Hub/Editor/2018.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -312,13 +312,13 @@
  <HintPath>/home/ubuntu/Unity/Hub/Editor/2018.3.4f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/home/ubuntu/Documents/Projects/software-engineering-project-190512/software-engineering-project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/home/ubuntu/Unity/Hub/Editor/2018.3.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
