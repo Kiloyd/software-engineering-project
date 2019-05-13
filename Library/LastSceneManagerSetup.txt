@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TestScene_Station.unity
+- path: Assets/Scenes/HUD_Test.unity
   isLoaded: 1
   isActive: 1
