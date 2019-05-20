@@ -10,7 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 1f;
     [SerializeField][Header("Stop speed threshold")]
     private float stop_speed = 0.1f;
+//    [SerializeField]
+    private UI_control UIcontroller;
 
+    private bool stop;
     private Rigidbody rb;
     private float sum;
     private float horizontal_speed;
@@ -22,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        stop = false;
+        UIcontroller = FindObjectOfType<UI_control>();
         rb = GetComponent<Rigidbody>();
         sum = 0.001f;
         horizontal_speed = 0f;
@@ -39,6 +44,22 @@ public class PlayerMovement : MonoBehaviour
     {
         sum = Mathf.Max(Mathf.Sqrt(Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * Input.GetAxis("Vertical")), 0.1f) ;
         //Debug.Log(sum.ToString());
+
+        // UI Control
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            stop = !stop;
+            Debug.Log(stop ? ("Pause") : ("Unpause"));
+
+            if (stop)
+            {
+                UIcontroller.Pause_active();
+            }
+            else
+            {
+                UIcontroller.HUD_active();
+            }
+        }
 
         horizontal_speed = (Mathf.Abs(Input.GetAxis("Horizontal") * speed) < stop_speed) ? 0f : Input.GetAxis("Horizontal") * speed;
         vertical_speed = (Mathf.Abs(Input.GetAxis("Vertical") * speed) < stop_speed) ? 0f : Input.GetAxis("Vertical") * speed;

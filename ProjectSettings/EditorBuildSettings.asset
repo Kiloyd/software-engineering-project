@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/UI_Control.unity
+    guid: 5b85bd463b666fe49896ff9d6b612d88
+  - enabled: 1
+    path: Assets/Scenes/HUD_Test.unity
+    guid: 1ee5584642063d3468cc52032f4cb9cd
+  - enabled: 1
+    path: Assets/Scenes/TestScene_LevelGenerate.unity
+    guid: 5549e18096917c385bffd7c142a055f8
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 36c63c74d4afc4e448980886ec6570d7
   m_configObjects: {}

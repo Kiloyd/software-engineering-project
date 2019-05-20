@@ -38,11 +38,14 @@ public class PlayerEvents : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
             eventRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(eventRay, out eventHit, stationDistance)) {
-                if(eventHit.collider.gameObject.name == "Station(Clone)") {
+            if (Physics.Raycast(eventRay, out eventHit, stationDistance))
+            {
+                if (eventHit.collider.gameObject.name == "Station(Clone)")
+                {
                     isKeyHeld = false;
 
                     startTime = Time.time;
@@ -53,24 +56,27 @@ public class PlayerEvents : MonoBehaviour
             }
         }
 
-        if(Input.GetKey(KeyCode.E) && isKeyHeld == false) {
+        if (Input.GetKey(KeyCode.E) && isKeyHeld == false)
+        {
             timer += Time.deltaTime;
 
-            if(timer > (startTime + stationHoldTime)) {
+            if (timer > (startTime + stationHoldTime))
+            {
                 isKeyHeld = true;
 
                 eventObject.GetComponent<StationHandler>().OnInteract();
             }
         }
 
-        if(Input.GetKeyUp(KeyCode.E)) {
+        if (Input.GetKeyUp(KeyCode.E))
+        {
             isKeyHeld = true;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Pellet"))
+        if (other.gameObject.CompareTag("Pellet"))
         {
             Destroy(other.gameObject);  // may need edit.
             Debug.Log("picked");
@@ -85,5 +91,5 @@ public class PlayerEvents : MonoBehaviour
     }
 
     #endregion
-      
+
 }

@@ -8,7 +8,11 @@ public class GhostMovement : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        GetComponent<Collider>().isTrigger = true;
+    }
+
     void Update()
     {
         Vector3 pos =  GameObject.FindGameObjectWithTag("Player").transform.position;

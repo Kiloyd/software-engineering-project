@@ -66,8 +66,10 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CrateHandler.cs" />
+    <Compile Include="Assets\Scripts\damage_gun.cs" />
     <Compile Include="Assets\Scripts\Fire_Weapon.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
+    <Compile Include="Assets\Scripts\Ghost_getHit.cs" />
     <Compile Include="Assets\Scripts\GhostMovement.cs" />
     <Compile Include="Assets\Scripts\Interface\weapon_type.cs" />
     <Compile Include="Assets\Scripts\LevelHandler.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\slow_gun.cs" />
     <Compile Include="Assets\Scripts\StationHandler.cs" />
+    <Compile Include="Assets\Scripts\UI_control.cs" />
+    <Compile Include="Assets\Scripts\Utility\Map_preview.cs" />
     <Compile Include="Assets\Scripts\Utility\Timer.cs" />
     <Compile Include="Assets\Texture\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
     <Compile Include="Assets\Texture\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />

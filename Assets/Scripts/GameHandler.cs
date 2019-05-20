@@ -10,6 +10,8 @@ public class GameHandler : MonoBehaviour
     private int victoryScore;
     [SerializeField][Header("Each Score of Pellet")]
     private int pelletScore;
+    [SerializeField]
+    private UI_control UIcontroller;
 
     private int nowScore;
 
@@ -22,6 +24,7 @@ public class GameHandler : MonoBehaviour
     private void Start()
     {
         points = GameObject.Find("Pellets");
+        UIcontroller = FindObjectOfType<UI_control>();
     }
 
     private void Awake()
@@ -56,6 +59,7 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 0;
         Debug.Log("Game Over");
         // call the result menu
+        UIcontroller.Result_active();
     }
 
     public void gameWin()
@@ -63,6 +67,7 @@ public class GameHandler : MonoBehaviour
         Time.timeScale = 0;
         Debug.Log("Game Win");
         // call the result menu
+        UIcontroller.Result_active();
     }
 
     public void resetScore()

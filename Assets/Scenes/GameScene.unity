@@ -45494,6 +45494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryScore: 3
   pelletScore: 1
+  UIcontroller: {fileID: 0}
 --- !u!4 &2064215431
 Transform:
   m_ObjectHideFlags: 0
@@ -48131,16 +48132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049184, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049184, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5830304459833049191, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48196,35 +48187,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5830304460367289127, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460852207608, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460367289129, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: maximumX
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460367289129, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: minimumX
-      value: -60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460852207607, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1443682119, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5830304460852207609, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}

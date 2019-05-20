@@ -12,6 +12,8 @@ public class slow_gun : weapon_type
     private float slow_rate = 0.5f;
     [SerializeField]
     private float slow_time = 2f;
+    [SerializeField]
+    private float force_factor = 1;
 
     private float speed_temp = 0f;
     private bool slow_trigger = true;
@@ -28,7 +30,7 @@ public class slow_gun : weapon_type
 
     public override void hit_effect()
     {
-        if (hit.collider.gameObject.name == enemy.name && slow_trigger == true)
+        if (hit.collider.gameObject.tag == "Enemy" && slow_trigger == true)
         {
             StartCoroutine(slow_enemy());
         }

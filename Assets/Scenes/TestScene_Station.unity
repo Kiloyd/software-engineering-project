@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,16 +199,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049184, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049184, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5830304459833049191, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -264,47 +254,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5830304460367289127, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460852207608, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460367289129, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: maximumX
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460367289129, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: minimumX
-      value: -60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304460852207607, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443682119, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049185, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: stationDistance
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049185, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: stationHoldTime
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5830304460852207609, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
 --- !u!1 &1450864250
 GameObject:

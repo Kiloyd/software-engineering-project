@@ -29,6 +29,8 @@ public class weapon_type : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            // play sound
+
             ray = player_cam.ScreenPointToRay(new Vector3(player_cam.pixelWidth / 2, player_cam.pixelHeight / 2, 0));
             if(Physics.Raycast(ray, out hit, float.MaxValue))
             {
