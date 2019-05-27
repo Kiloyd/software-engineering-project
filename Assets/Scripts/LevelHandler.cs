@@ -47,6 +47,7 @@ public class LevelHandler : MonoBehaviour
         ParsePellets(doc);
         ParseStations(doc);
         ParseCrates(doc);
+        ParseItems(doc);
     } 
  
     private void ParsePlayer(XmlDocument doc) { 
@@ -170,5 +171,12 @@ public class LevelHandler : MonoBehaviour
         }
 
         cratesObject.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void ParseItems(XmlDocument doc) {
+        GameObject itemsObject = new GameObject("Items");
+        itemsObject.transform.parent = levelObject.transform;
+
+        return;
     }
 } 

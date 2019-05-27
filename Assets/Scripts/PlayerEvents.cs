@@ -7,10 +7,10 @@ public class PlayerEvents : MonoBehaviour
     #region Property
 
     [SerializeField]
-    private float stationDistance;
+    private float interactDistance;
 
     [SerializeField]
-    private float stationHoldTime;
+    private float interactHoldTime;
 
     private GameHandler gm;
 
@@ -42,9 +42,9 @@ public class PlayerEvents : MonoBehaviour
         {
             eventRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(eventRay, out eventHit, stationDistance))
+            if (Physics.Raycast(eventRay, out eventHit, interactDistance))
             {
-                if (eventHit.collider.gameObject.name == "Station(Clone)")
+                if (eventHit.collider.gameObject.name == "Station(Clone)" || eventHit.collider.gameObject.name == "Crate(Clone)")
                 {
                     isKeyHeld = false;
 
@@ -60,11 +60,16 @@ public class PlayerEvents : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (timer > (startTime + stationHoldTime))
+            if (timer > (startTime + interactHoldTime))
             {
                 isKeyHeld = true;
 
-                eventObject.GetComponent<StationHandler>().OnInteract();
+                if(eventObject.name == "Station(Clone)") {
+                    eventObject.GetComponent<StationHandler>().OnInteract();
+                }
+                else if(eventObject.name == "Crate(Clone)") {
+                    eventObject.GetComponent<CrateHandler>().OnInteract();
+                }
             }
         }
 
