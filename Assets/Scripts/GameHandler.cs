@@ -56,7 +56,6 @@ public class GameHandler : MonoBehaviour
 
     public void gameLose()
     {
-        Time.timeScale = 0;
         Debug.Log("Game Over");
         // call the result menu
         UIcontroller.Result_active();
@@ -64,7 +63,6 @@ public class GameHandler : MonoBehaviour
 
     public void gameWin()
     {
-        Time.timeScale = 0;
         Debug.Log("Game Win");
         // call the result menu
         UIcontroller.Result_active();

@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
 
     #region Unity 
 
-    private void OnEnable()
+    private void Start()
     {
         rotateX = 0f;
         rotateY = 0f;

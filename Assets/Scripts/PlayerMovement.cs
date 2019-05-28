@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 1f;
     [SerializeField][Header("Stop speed threshold")]
     private float stop_speed = 0.1f;
-//    [SerializeField]
+    [SerializeField]
     private UI_control UIcontroller;
 
     private bool stop;
@@ -36,8 +36,9 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // change to UI_control. 
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     private void Update()
