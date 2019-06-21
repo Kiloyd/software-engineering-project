@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class damage_gun : weapon_type
 {
-    #region Property
-
-    [SerializeField]
-    private GameObject enemy;
-
-    #endregion
-
     #region Override Function
 
     public override void fire_ray()
@@ -22,11 +15,10 @@ public class damage_gun : weapon_type
     {
         if (hit.collider.gameObject.tag == "Enemy")
         {
+            Debug.Log("damage hit effect");
             Destroy(hit.collider.gameObject);
         }
     }
 
     #endregion
-
-
 }

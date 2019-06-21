@@ -69,4 +69,25 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+
+    #region Public function
+
+    public void SpeedUp(float factor, float duration)
+    {
+        StartCoroutine(player_boost(factor, duration));
+    }
+
+    #endregion
+
+    #region IENumerator
+
+    IEnumerator player_boost(float boost_factor, float time)
+    {
+        float temp = speed;
+        speed *= boost_factor;
+        yield return new WaitForSeconds(time);
+        speed = temp;
+    }
+
+    #endregion
 }

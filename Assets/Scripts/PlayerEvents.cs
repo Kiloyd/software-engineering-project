@@ -8,12 +8,10 @@ public class PlayerEvents : MonoBehaviour
 
     [SerializeField]
     private float interactDistance;
-
     [SerializeField]
     private float interactHoldTime;
 
     private GameHandler gm;
-
     private Ray eventRay;
     private RaycastHit eventHit;
     private GameObject eventObject;

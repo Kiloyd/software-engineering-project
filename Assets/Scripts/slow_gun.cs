@@ -7,7 +7,6 @@ public class slow_gun : weapon_type
 {
     #region Property
 
-    public GameObject enemy;
     [SerializeField]
     private float slow_rate = 0.5f;
     [SerializeField]
@@ -20,7 +19,6 @@ public class slow_gun : weapon_type
 
     #endregion
 
-
     #region Override function
 
     public override void fire_ray()
@@ -32,6 +30,7 @@ public class slow_gun : weapon_type
     {
         if (hit.collider.gameObject.tag == "Enemy" && slow_trigger == true)
         {
+            Debug.Log("slow hit effect");
             StartCoroutine(slow_enemy());
         }
     }

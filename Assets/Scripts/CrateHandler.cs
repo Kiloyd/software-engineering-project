@@ -6,7 +6,7 @@ public class CrateHandler : MonoBehaviour
 {
     [SerializeField]
     private float dropVelocity;
-
+    [SerializeField]
     private LootTable lootTable;
 
     private bool isLanded;
@@ -14,7 +14,6 @@ public class CrateHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lootTable = this.GetComponent<LootTable>();
         isLanded = false;
     }
 
