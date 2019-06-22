@@ -35,7 +35,6 @@ public class UI_control : MonoBehaviour
 
     #endregion
 
-
     #region Public Function
 
     public void HUD_active()

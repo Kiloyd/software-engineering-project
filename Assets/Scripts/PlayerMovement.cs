@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         // UI Control
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            GetComponent<PlayerInventory>().enabled = !GetComponent<PlayerInventory>().enabled;
             stop = !stop;
             Debug.Log(stop ? ("Pause") : ("Unpause"));
 
