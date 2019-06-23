@@ -2874,7 +2874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dc5ccc5197bb948b5f23d1824e450a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3.5
   stop_speed: 0.1
   UIcontroller: {fileID: 0}
 --- !u!114 &5830304459833049185
