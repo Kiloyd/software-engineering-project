@@ -26,7 +26,7 @@ public class CrateHandler : MonoBehaviour
             Vector3 tempPos = transform.position;
             if((tempPos.y - transform.localScale.y / 2) < 0) {
                 isLanded = true;
-                transform.localPosition = new Vector3(tempPos.x, transform.localScale.y / 2, tempPos.z);
+                transform.localPosition = new Vector3(tempPos.x / 2, transform.localScale.y / 2, tempPos.z / 2);
             }
         }
     }
@@ -42,7 +42,7 @@ public class CrateHandler : MonoBehaviour
         tempObject.transform.parent = itemsObject.transform;
 
         Vector3 tempPos = transform.position;
-        tempObject.transform.localPosition = new Vector3(tempPos.x, 3, tempPos.z);
+        tempObject.transform.localPosition = new Vector3(tempPos.x / 2, 1, tempPos.z / 2);
 
         itemsObject.transform.localScale = new Vector3(1, 1, 1);
 

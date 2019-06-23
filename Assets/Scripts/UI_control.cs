@@ -41,8 +41,8 @@ public class UI_control : MonoBehaviour
     {
         Debug.Log("HUD menu");
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 
         HUD.SetActive(true);
         Pause.SetActive(false);

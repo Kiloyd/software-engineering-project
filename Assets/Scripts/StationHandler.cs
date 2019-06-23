@@ -33,7 +33,7 @@ public class StationHandler : MonoBehaviour
         tempObject.transform.parent = cratesObject.transform;
 
         Vector3 tempPos = transform.position;
-        tempObject.transform.localPosition = new Vector3(tempPos.x, crateInitialHeight, tempPos.z);
+        tempObject.transform.localPosition = new Vector3(tempPos.x / 2, crateInitialHeight, tempPos.z / 2);
 
         cratesObject.transform.localScale = new Vector3(1, 1, 1);
 

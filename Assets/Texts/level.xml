@@ -522,7 +522,9 @@
 		<Wall xPos="27" zPos="30"/>
 	</Walls>
 	<Pellets>
-		<Pellet xPos="4" zPos="4"/>
-		<Pellet xPos="5" zPos="5"/>
+		<Pellet xPos="5" zPos="4"/>
 	</Pellets>
+	<Stations>
+		<Station xPos="4" zPos="4"/>
+	</Stations>
 </Level>

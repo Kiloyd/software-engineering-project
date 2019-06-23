@@ -36,9 +36,10 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        // change to UI_control. 
+        //change to UI_control. 
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
+
     }
 
     private void Update()

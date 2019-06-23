@@ -150,6 +150,10 @@ MonoBehaviour:
     type: 3}
   pelletPrefab: {fileID: 8927010787609416821, guid: 26632151b8e714cdfa219f23429c25f7,
     type: 3}
+  stationPrefab: {fileID: 2561955118150177809, guid: 723ee4842ec45a508ab0181d65d033c4,
+    type: 3}
+  cratePrefab: {fileID: 3317454630857805875, guid: a88b9ff6bbeea94818768051044c70b8,
+    type: 3}
 --- !u!4 &237087636
 Transform:
   m_ObjectHideFlags: 0
