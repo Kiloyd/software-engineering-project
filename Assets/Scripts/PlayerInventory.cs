@@ -10,8 +10,8 @@ public class PlayerInventory : MonoBehaviour
     private LootTable itemTable;
     [SerializeField]
     private List<int> inventory;
-     [SerializeField]
-     private int nowSelectIndex;
+    [SerializeField]
+    private int nowSelectIndex;
 
     #endregion
 
@@ -84,6 +84,20 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
+    }
+
+    #endregion
+
+    #region Public function
+
+    public int getSelectIndex()
+    {
+        return nowSelectIndex;
+    }
+
+    public int getSelectItemAmount()
+    {
+        return inventory[nowSelectIndex];
     }
 
     #endregion

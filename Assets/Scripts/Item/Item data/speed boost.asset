@@ -16,5 +16,6 @@ MonoBehaviour:
   weight: 50
   interact_area: {fileID: 6527932809402158246, guid: c1a286d882936e44ab9d61068449679a,
     type: 3}
+  ItemImage: {fileID: 21300000, guid: e3c9f864e591b834f928ddefc2d949b0, type: 3}
   speedUpFactor: 1.5
   duration: 3

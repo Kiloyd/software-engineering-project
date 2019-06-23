@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Item : ScriptableObject
@@ -13,6 +14,8 @@ public class Item : ScriptableObject
     protected int weight;
     [SerializeField]
     protected Collider interact_area;
+    [SerializeField]
+    protected Sprite ItemImage;
 
     #endregion
 
@@ -50,6 +53,11 @@ public class Item : ScriptableObject
     public string getName()
     {
         return prefab.name;
+    }
+
+    public Sprite getSprite()
+    {
+        return ItemImage;
     }
 
     #endregion
