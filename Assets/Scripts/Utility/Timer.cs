@@ -10,9 +10,8 @@ public class Timer : MonoBehaviour
     private float countdownTime;
     [SerializeField]
     private bool trigger;
-
+    [SerializeField]
     private float setTime;
-
 
     #endregion
 
@@ -23,7 +22,16 @@ public class Timer : MonoBehaviour
         setTime += Time.deltaTime;
 
         if (setTime >= countdownTime)
+        {
             trigger = true;
+            setTime = countdownTime;
+        }
+
+    }
+
+    public void setCountdownTime(float value)
+    {
+        countdownTime = value;
     }
 
     public void resetTime()
@@ -35,6 +43,16 @@ public class Timer : MonoBehaviour
     public bool getTrigger()
     {
         return trigger;
+    }
+
+    public float getTime()
+    {
+        return setTime;
+    }
+
+    public float getCountdownTime()
+    {
+        return countdownTime;
     }
 
     #endregion

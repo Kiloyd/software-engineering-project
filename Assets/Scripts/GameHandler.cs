@@ -25,6 +25,7 @@ public class GameHandler : MonoBehaviour
     {
         points = GameObject.Find("Pellets");
         UIcontroller = FindObjectOfType<UI_control>();
+        Debug.Log("All Points: " + points.transform.childCount.ToString());
     }
 
     private void Awake()
@@ -47,9 +48,8 @@ public class GameHandler : MonoBehaviour
         nowScore += pelletScore;
         // play sound effect
 
-        int remainPoints = points.transform.childCount;
-        Debug.Log("Remaining Points: " + remainPoints);
-        if(remainPoints <= 0) {
+        Debug.Log("Points to Victory: " + (victoryScore - nowScore).ToString());
+        if(nowScore >= victoryScore) {
             gameWin();
         }
     }

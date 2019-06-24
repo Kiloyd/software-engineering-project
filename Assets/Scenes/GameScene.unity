@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1491,6 +1491,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Clyde
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120668143362670704, guid: 2bc2cecf3a28da7a0be6937d0388979d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8331648649842987830, guid: 2bc2cecf3a28da7a0be6937d0388979d,
         type: 3}
@@ -8965,6 +8970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pinky
+      objectReference: {fileID: 0}
+    - target: {fileID: 7025678602908361035, guid: 60bb8a09c73d6addfa97c1990e244990,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3737249112769169804, guid: 60bb8a09c73d6addfa97c1990e244990,
         type: 3}
@@ -45654,7 +45664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e38647df02d6c44ad6537b5eb93c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryScore: 3
+  victoryScore: 50
   pelletScore: 1
   UIcontroller: {fileID: 0}
 --- !u!4 &2064215431
@@ -47414,6 +47424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blinky
       objectReference: {fileID: 0}
+    - target: {fileID: 4154930898948831820, guid: 0cc93f20b66371f4ca3ff5f775e5e518,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4154930898948831811, guid: 0cc93f20b66371f4ca3ff5f775e5e518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47790,6 +47805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Inky
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816253874274870364, guid: 1f1cb838a627a1f4499e76ce0040d99e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3762509707434093837, guid: 1f1cb838a627a1f4499e76ce0040d99e,
         type: 3}
@@ -48493,15 +48513,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1443682119, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830304459833049189, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 91e23cdaf767306ccb504e58c25c6a4c, type: 2}
     - target: {fileID: 1985962074542454235, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -48511,6 +48522,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618500338944344824, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443682119, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d09fe09e7e9414e8f3d2c3b0c8f9ef, type: 3}

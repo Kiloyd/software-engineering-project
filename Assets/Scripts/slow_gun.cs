@@ -10,12 +10,31 @@ public class slow_gun : weapon_type
     [SerializeField]
     private float slow_rate = 0.5f;
     [SerializeField]
-    private float slow_time = 2f;
+    private float slow_time = 0.5f;
     [SerializeField]
     private float force_factor = 1;
+    [SerializeField]
+    private float recovery_time = 1.5f;
+    [SerializeField]
+    private Timer countdown;
 
     private float speed_temp = 0f;
     private bool slow_trigger = true;
+
+    #endregion
+
+    #region Unity
+
+    private void Start()
+    {
+        countdown = GetComponent<Timer>();
+    }
+
+    private void Update()
+    {
+        if(!countdown.getTrigger())
+            countdown.CountDown();
+    }
 
     #endregion
 
@@ -23,7 +42,23 @@ public class slow_gun : weapon_type
 
     public override void fire_ray()
     {
-        base.fire_ray();
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (countdown.getTrigger())
+            {
+                // play sound
+
+                ray = player_cam.ScreenPointToRay(new Vector3(player_cam.pixelWidth / 2, player_cam.pixelHeight / 2, 0));
+                if (Physics.Raycast(ray, out hit, float.MaxValue))
+                {
+                    Debug.DrawRay(ray.origin, ray.direction, Color.red);
+                    Debug.Log(hit.point.ToString() + " " + hit.collider.gameObject.name);
+
+                    hit_effect();
+                }
+                countdown.resetTime();
+            }
+        }
     }
 
     public override void hit_effect()
